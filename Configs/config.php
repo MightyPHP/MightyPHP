@@ -31,6 +31,8 @@ define("TEMPLATE_PATH",__DIR__.'/../Application/Views/Templates');
 define("CONFIG_PATH",__DIR__.'/../Configs');
 /*Utilities Path*/
 define("UTILITY_PATH",__DIR__.'/../Utilities');
+/*Log Path */
+define("LOG_PATH",__DIR__.'/../Application/Logs');
 
 /**
  * Default Lang 
