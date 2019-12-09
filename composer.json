@@ -14,6 +14,7 @@
         }
     ],
     "require": {
+        "php": "^7.2",
 		"phpseclib/phpseclib": "~2.0",
 		"mightyphp/mightycore": "^0.0.1",
         "twig/twig": "^2.0"
