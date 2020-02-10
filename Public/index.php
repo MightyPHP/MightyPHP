@@ -1,14 +1,17 @@
 <?php
 include_once __DIR__.'/../Configs/config.php';
-if(MIGHTY_MODE == 'dev'){
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/mightyphp/mightycore/src/bootstrap/app.php';
+
+if(env('ENV') == 'develop'){
     ini_set('display_errors','On');
     ini_set('html_errors',true);
     error_reporting(E_ALL);
-}else if(MIGHTY_MODE == 'prod'){
+}else if(env('ENV') == 'production'){
     //Do not display error for security reasons
     ini_set('display_errors','Off');
 }
-require __DIR__ . '/../vendor/autoload.php';
+
 spl_autoload_register(function($class_name) {
     $file = CONTROLLER_PATH . '/' . $class_name . '.php';
     if (file_exists($file)) {
