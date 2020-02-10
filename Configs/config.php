@@ -1,10 +1,10 @@
 <?php
+
 /**
- * Application Environment
- *  -Development (dev)
- *  -Production (prod)
+ * Document Root 
  */
-define("MIGHTY_MODE", "dev");
+define("DOC_ROOT", __DIR__.'/../');
+
 /**
  * Default Root Path of the application
  * -useful for link generation
