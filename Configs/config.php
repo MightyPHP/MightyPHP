@@ -44,3 +44,10 @@ define("DEFAULT_LANG","en");
  */
 // How long should a session last in seconds
 define("SECURITY_SESSION_TIMEOUT",1800);
+
+/**
+ * Database connection type
+ *  - If in doubt, leave it as default
+ */
+/*DATABASE Connection can be of 'default' or 'ssh'*/
+define("DATABASE_CONNECTION_TYPE", "default");
