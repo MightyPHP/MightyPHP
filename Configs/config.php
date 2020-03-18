@@ -40,6 +40,11 @@ define("LOG_PATH",__DIR__.'/../Application/Logs');
 define("DEFAULT_LANG","en");
 
 /**
+ * Set default timezone
+ */
+define("DEFAULT_TIMEZONE", "UTC");
+
+/**
  * Security configs
  */
 // How long should a session last in seconds
