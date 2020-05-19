@@ -1,10 +1,10 @@
 <?php
+
 /**
- * Application Environment
- *  -Development (dev)
- *  -Production (prod)
+ * Document Root 
  */
-define("MIGHTY_MODE", "dev");
+define("DOC_ROOT", __DIR__.'/../');
+
 /**
  * Default Root Path of the application
  * -useful for link generation
@@ -31,6 +31,8 @@ define("TEMPLATE_PATH",__DIR__.'/../Application/Views/Templates');
 define("CONFIG_PATH",__DIR__.'/../Configs');
 /*Utilities Path*/
 define("UTILITY_PATH",__DIR__.'/../Utilities');
+/*Log Path */
+define("LOG_PATH",__DIR__.'/../Application/Logs');
 
 /**
  * Default Lang 
@@ -38,7 +40,19 @@ define("UTILITY_PATH",__DIR__.'/../Utilities');
 define("DEFAULT_LANG","en");
 
 /**
+ * Set default timezone
+ */
+define("DEFAULT_TIMEZONE", "UTC");
+
+/**
  * Security configs
  */
 // How long should a session last in seconds
 define("SECURITY_SESSION_TIMEOUT",1800);
+
+/**
+ * Database connection type
+ *  - If in doubt, leave it as default
+ */
+/*DATABASE Connection can be of 'default' or 'ssh'*/
+define("DATABASE_CONNECTION_TYPE", "default");

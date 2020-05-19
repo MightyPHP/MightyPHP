@@ -5,4 +5,4 @@ use MightyCore\UTIL;
 /**
  * Your routes here
  */
-ROUTE::get('/',"controller@method");
+ROUTE::get('/',"home@welcome");

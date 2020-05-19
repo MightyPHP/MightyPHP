@@ -1,23 +1,16 @@
 <?php
+include_once __DIR__.'/../Configs/config.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/mightyphp/mightycore/src/bootstrap/app.php';
 
-/**
- * Description of api
- *
- * @author DESMOND
- */
-
-include_once 'Configs/config.php';
-
-if(MIGHTY_MODE == 'dev'){
+if(env('ENV') == 'develop'){
     ini_set('display_errors','On');
     ini_set('html_errors',true);
     error_reporting(E_ALL);
-}else if(MIGHTY_MODE == 'prod'){
+}else if(env('ENV') == 'production'){
     //Do not display error for security reasons
     ini_set('display_errors','Off');
 }
-
-require __DIR__ . '/vendor/autoload.php';
 
 spl_autoload_register(function($class_name) {
     $file = CONTROLLER_PATH . '/' . $class_name . '.php';
@@ -37,13 +30,15 @@ spl_autoload_register(function($class_name) {
         require_once $file;
     }
 });
-
 // Requests from the same server don't have a HTTP_ORIGIN header
 if (!array_key_exists('HTTP_ORIGIN', $_SERVER)) {
     $_SERVER['HTTP_ORIGIN'] = $_SERVER['SERVER_NAME'];
 }
 
-include_once 'Configs/routes.php';
+foreach (glob( __DIR__."/../Routes/*.php") as $filename)
+{
+    include_once $filename;
+}
 
 try {
 	$APP = new \MightyCore\APP($_REQUEST, $_SERVER);
@@ -51,5 +46,4 @@ try {
 } catch (Exception $e) {
     echo json_encode(Array('error' => $e->getMessage()));
 }
-
 ?>
