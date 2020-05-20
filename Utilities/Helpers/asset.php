@@ -1,5 +1,4 @@
 <?php
-
 function asset($url){
-    return ROOT_PATH.$url;
+    return env('APP_URL', '/').$url;
 }
