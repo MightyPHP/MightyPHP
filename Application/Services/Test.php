@@ -1,6 +1,6 @@
 <?php
-use MightyCore\SERVICE;
-class testService extends SERVICE
+namespace Application\Services;
+class Test
 {
      public function testservicefunction() {  
 		return 'Hello, I am returned from service';
