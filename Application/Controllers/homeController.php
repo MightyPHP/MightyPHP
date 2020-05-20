@@ -1,13 +1,12 @@
 <?php
-use MightyCore\CONTROLLER;
+namespace Application\Controllers;
+
 use MightyCore\RESPONSE;
 use MightyCore\VERSION;
 use MightyCore\MOMENT;
-use MightyCore\UTIL;
-class homeController extends CONTROLLER
+class HomeController extends \MightyCore\CONTROLLER
 {
     public function welcome() {  
-        UTIL::log('hello');
         RESPONSE::return($this->_view('welcome')->render(array(
             'MightyCoreVersion' => VERSION::getVersion(),
             "date" => MOMENT::now()->toDateTimeString('Y-m-d')
