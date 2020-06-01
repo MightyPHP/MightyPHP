@@ -1,1 +1,0 @@
-This is where your seeds will live.

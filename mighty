@@ -1,5 +1,4 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
-include_once __DIR__.'/Configs/config.php';
+require __DIR__ . '/vendor/mightyphp/mightycore/src/bootstrap/app.php';
 
 $console = new \MightyCore\Command\Console($argv);
