@@ -3,13 +3,13 @@
     "type": "library",
     "description": "The MightyPHP Framework",
     "keywords": ["php","php-framework", "mvc", "framework"],
-    "homepage": "https://mightyphp.github.io",
+    "homepage": "https://mightyphp.com",
     "license": "MIT",
     "authors": [
         {
             "name": "Desmond Chin Chung Choon",
-            "email": "desmond@desmondchin.xyz",
-            "homepage": "https://desmondchin.xyz",
+            "email": "contact@desmondchin.dev",
+            "homepage": "https://desmondchin.dev",
             "role": "Developer"
         }
     ],
