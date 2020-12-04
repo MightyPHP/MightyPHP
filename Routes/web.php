@@ -1,7 +1,10 @@
 <?php
-use MightyCore\ROUTE;
-
 /**
  * Your routes here
  */
-ROUTE::get('/',"HomeController@welcome");
+
+use MightyCore\Routing\Router;
+
+$index = new Router('/');
+$index->get('/', "HomeController@welcome")->name('home');
+$index->get('/test/asd', "TestController@index")->name('index');
