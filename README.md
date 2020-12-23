@@ -4,14 +4,9 @@
 </p>
 
 # MightyPHP
+MightyPHP is a simple MVC framework written in PHP for projects that are suitable for any size. It aims to provide you with the best development experience possible, by combining modern web development concepts and merging it into one streamlined framework.
 
-MightyPHP is a simple MVC framework written in PHP for projects that are ranged from small to middle in size.
-
-
-## Features included
-- Centralized templating.
-- Services extension for controller logics.
-- Multi database connections.
+To learn more about Mighty, head on to the documentation [here](https://docs.mightyphp.com).
 
 ## Installation
 Installation is done with Composer. Simply use the line below:
@@ -19,3 +14,8 @@ Installation is done with Composer. Simply use the line below:
 
 Or you can create a project direct with:
 ##### `composer create-project mightyphp/mightyphp project-name-or-path`
+
+## Sponsors / Supporters
+MightyPHP will only grow and progress based on its support and sponsors.
+
+- [JetBrains](https://www.jetbrains.com/?from=MightyPHP)
