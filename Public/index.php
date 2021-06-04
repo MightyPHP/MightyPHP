@@ -18,7 +18,7 @@ foreach (glob( __DIR__."/../Routes/*.php") as $filename)
  * Starts the Application.
  */
 try {
-	$APP = new \MightyCore\APP($_REQUEST, $_SERVER);
+	$APP = new MightyCore\App($_REQUEST, $_SERVER);
 	$APP->callAPP();
 } catch (Exception $e) {
     echo json_encode(Array('error' => $e->getMessage()));
